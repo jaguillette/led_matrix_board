@@ -211,7 +211,7 @@ PD0
 Text GLabel 4150 3850 2    50   Input ~ 0
 PD1
 $Comp
-L kicad_fab:6MM_SWITCH6MM_SWITCH S1
+L matrix_board-rescue:6MM_SWITCH6MM_SWITCH-kicad_fab S1
 U 1 1 5C15CBC9
 P 4950 4550
 F 0 "S1" V 4621 4550 45  0000 C CNN
@@ -222,7 +222,7 @@ F 3 "" H 4950 4550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L kicad_fab:6MM_SWITCH6MM_SWITCH S2
+L matrix_board-rescue:6MM_SWITCH6MM_SWITCH-kicad_fab S2
 U 1 1 5C15CC59
 P 6000 4600
 F 0 "S2" V 5671 4600 45  0000 C CNN
@@ -240,4 +240,23 @@ Text GLabel 4750 4550 0    50   Input ~ 0
 VCC
 Text GLabel 5800 4600 0    50   Input ~ 0
 VCC
+$Comp
+L fab:PINHD-2X2-SMD M3
+U 1 1 5C1691BE
+P 5000 5250
+F 0 "M3" H 4950 5604 45  0000 C CNN
+F 1 "PINHD-2X2-SMD" H 4950 5520 45  0000 C CNN
+F 2 "fab:fab-2X02SMD" H 5030 5400 20  0001 C CNN
+F 3 "" H 5000 5250 50  0001 C CNN
+	1    5000 5250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4800 5150 0    50   Input ~ 0
+VCC
+Text GLabel 5100 5150 2    50   Input ~ 0
+GROUND
+Text GLabel 4800 5250 0    50   Input ~ 0
+VCC
+Text GLabel 5100 5250 2    50   Input ~ 0
+GROUND
 $EndSCHEMATC
