@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L matrix_board-rescue:ATmega328P-AU-MCU_Microchip_ATmega U1
-U 1 1 5C09DA73
-P 3550 3250
-F 0 "U1" H 3550 1664 50  0000 C CNN
-F 1 "ATmega328P-AU" H 3550 1573 50  0000 C CNN
-F 2 "fab:fab-TQFP32-08THIN" H 3550 3250 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3550 3250 50  0001 C CNN
-	1    3550 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L matrix_board-rescue:LED-fab M1
 U 1 1 5C09DCCA
 P 5400 3150
@@ -127,7 +116,7 @@ U 1 1 5C0CFB08
 P 5150 2200
 F 0 "J1" H 5200 2717 50  0000 C CNN
 F 1 "MATRIX_CONNECTOR" H 5200 2626 50  0000 C CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_2x08_P2.00mm_Vertical_SMD" H 5150 2200 50  0001 C CNN
+F 2 "fab:fab-2X08SMD" H 5150 2200 50  0001 C CNN
 F 3 "~" H 5150 2200 50  0001 C CNN
 	1    5150 2200
 	1    0    0    -1  
@@ -204,8 +193,6 @@ NoConn ~ 4150 3450
 NoConn ~ 2950 2350
 NoConn ~ 2950 2250
 NoConn ~ 2950 2050
-NoConn ~ 4150 2650
-NoConn ~ 4150 2750
 Text GLabel 4150 3750 2    50   Input ~ 0
 PD0
 Text GLabel 4150 3850 2    50   Input ~ 0
@@ -258,5 +245,52 @@ GROUND
 Text GLabel 4800 5250 0    50   Input ~ 0
 VCC
 Text GLabel 5100 5250 2    50   Input ~ 0
+GROUND
+$Comp
+L fab:RES-US1206 R3
+U 1 1 5C16F8E5
+P 6200 3650
+F 0 "R3" H 6200 3844 45  0000 C CNN
+F 1 "10k" H 6200 3760 45  0000 C CNN
+F 2 "fab:fab-R1206" H 6230 3800 20  0001 C CNN
+F 3 "" H 6200 3650 50  0001 C CNN
+	1    6200 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 6000 3650 0    50   Input ~ 0
+VCC
+Text GLabel 6400 3650 2    50   Input ~ 0
+RESET
+$Comp
+L matrix_board-rescue:ATmega328P-AU-MCU_Microchip_ATmega U1
+U 1 1 5C09DA73
+P 3550 3250
+F 0 "U1" H 3550 1664 50  0000 C CNN
+F 1 "ATmega328P-AU" H 3550 1573 50  0000 C CNN
+F 2 "fab:fab-TQFP32-08THIN" H 3550 3250 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3550 3250 50  0001 C CNN
+	1    3550 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4150 2650 2    50   Input ~ 0
+XTAL1
+Text GLabel 4150 2750 2    50   Input ~ 0
+XTAL2
+$Comp
+L fab:RESONATOR M4
+U 1 1 5C17B852
+P 6700 2350
+F 0 "M4" H 6700 2604 45  0000 C CNN
+F 1 "RESONATOR" H 6700 2520 45  0000 C CNN
+F 2 "fab:fab-EFOBM" H 6730 2500 20  0001 C CNN
+F 3 "" H 6700 2350 50  0001 C CNN
+	1    6700 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 6400 2350 0    50   Input ~ 0
+XTAL1
+Text GLabel 7000 2350 2    50   Input ~ 0
+XTAL2
+Text GLabel 6700 2650 3    50   Input ~ 0
 GROUND
 $EndSCHEMATC
